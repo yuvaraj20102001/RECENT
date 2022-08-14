@@ -1,0 +1,73 @@
+class USER{
+
+attributes(
+
+    Uid: 
+    Uname:
+    Upassword:
+    Uemail:
+    preffered_language:
+    referrel_code:
+    push_notification:
+    email_notification:
+
+    BANK:
+    PAY:
+    EARNINGS:
+    INVITES:
+)
+
+methods(
+    get_user_details():
+    update_user_details():
+
+
+)
+
+
+
+}
+class BANK:{
+
+attributes(
+    bankid:
+    bankname:
+    ifsc:
+    account_number:
+    upi:
+    account_holder_name:
+    bank_balance:
+    )
+
+methods(
+    get_bank_details():
+    update_bank_details():
+    remove_bank_account():
+    add_bank_account():
+)
+
+}
+
+class PAY:{
+    attributes(
+        transactionid:
+        transaction_type:
+        transaction_amount:
+        transaction_date:
+        transaction_status:
+        transaction_description:
+        )
+    methods(
+        display_transactions():
+        pay():
+    )
+}
+class EARNINGS:{
+    referrel_code:
+    amount:
+    date:
+
+}
+class INVITES:{
+    
+}
