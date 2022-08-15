@@ -13,10 +13,21 @@ class bank:
             "bank_name":self.bank_name,"bank_balance":self.bank_balance,"upi":self.upi}
         
         
+    def add_money(self,bank_obj,amount):
+        self.bank_obj=bank_obj
+        self.amount=amount
+        self.bank_obj.bank_dict["bank_balance"]+=self.amount
 
 
-    def check_balance(self):
-        print()
+    def check_balance(self,bank_obj):
+        self.bank_obj=bank_obj
+        print(self.bank_obj.bank_dict["bank_balance"])
+
+    def display_bank_details(self,bank_objs):
+        self.bank_objs=bank_objs
+        print("The bank accounts located in your account :::\n")
+        for i in self.bank_objs.keys():
+            print("bank_id ::",i,"Bank details",self.bank_objs[i].bank_dict)
         
 
         
