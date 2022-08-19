@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import random
 
-img=cv2.imread("Face-recoginition/rect2.jpg")
+img=cv2.imread("Face-recoginition/filter/pent.jpg")
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 _,thresh=cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
@@ -12,8 +12,8 @@ contours,heirarchy=cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE
 # print(contours)
 
 for contour in contours[1:]:
-    # contour=contour.ravel()
-    # approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True)
+    contour=contour.ravel()
+    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True)
     cont=contour.ravel()
     # print(len(approx))
     color = random.sample(range(255),3)
